@@ -129,11 +129,9 @@ func (rdr *NpyReader) GetFloat64() ([]float64, error) {
 		return nil, fmt.Errorf("Reader does not contain float64 data")
 	}
 	data := make([]float64, rdr.n_elt)
-	for k := 0; k < rdr.n_elt; k++ {
-		err := binary.Read(rdr.stream, rdr.endian, &data[k])
-		if err != nil {
-			return nil, err
-		}
+	err := binary.Read(rdr.stream, rdr.endian, &data)
+	if err != nil {
+		return nil, err
 	}
 
 	return data, nil
@@ -146,11 +144,9 @@ func (rdr *NpyReader) GetFloat32() ([]float32, error) {
 		return nil, fmt.Errorf("Reader does not contain float32 data")
 	}
 	data := make([]float32, rdr.n_elt)
-	for k := 0; k < rdr.n_elt; k++ {
-		err := binary.Read(rdr.stream, rdr.endian, &data[k])
-		if err != nil {
-			return nil, err
-		}
+	err := binary.Read(rdr.stream, rdr.endian, &data)
+	if err != nil {
+		return nil, err
 	}
 
 	return data, nil
@@ -163,11 +159,9 @@ func (rdr *NpyReader) GetInt8() ([]int8, error) {
 		return nil, fmt.Errorf("Reader does not contain int8 data")
 	}
 	data := make([]int8, rdr.n_elt)
-	for k := 0; k < rdr.n_elt; k++ {
-		err := binary.Read(rdr.stream, rdr.endian, &data[k])
-		if err != nil {
-			return nil, err
-		}
+	err := binary.Read(rdr.stream, rdr.endian, &data)
+	if err != nil {
+		return nil, err
 	}
 
 	return data, nil
@@ -180,11 +174,9 @@ func (rdr *NpyReader) GetInt16() ([]int16, error) {
 		return nil, fmt.Errorf("Reader does not contain int16 data")
 	}
 	data := make([]int16, rdr.n_elt)
-	for k := 0; k < rdr.n_elt; k++ {
-		err := binary.Read(rdr.stream, rdr.endian, &data[k])
-		if err != nil {
-			return nil, err
-		}
+	err := binary.Read(rdr.stream, rdr.endian, &data)
+	if err != nil {
+		return nil, err
 	}
 
 	return data, nil
@@ -197,11 +189,9 @@ func (rdr *NpyReader) GetInt32() ([]int32, error) {
 		return nil, fmt.Errorf("Reader does not contain int32 data")
 	}
 	data := make([]int32, rdr.n_elt)
-	for k := 0; k < rdr.n_elt; k++ {
-		err := binary.Read(rdr.stream, rdr.endian, &data[k])
-		if err != nil {
-			return nil, err
-		}
+	err := binary.Read(rdr.stream, rdr.endian, &data)
+	if err != nil {
+		return nil, err
 	}
 
 	return data, nil
@@ -214,11 +204,9 @@ func (rdr *NpyReader) GetInt64() ([]int64, error) {
 		return nil, fmt.Errorf("Reader does not contain int64 data")
 	}
 	data := make([]int64, rdr.n_elt)
-	for k := 0; k < rdr.n_elt; k++ {
-		err := binary.Read(rdr.stream, rdr.endian, &data[k])
-		if err != nil {
-			return nil, err
-		}
+	err := binary.Read(rdr.stream, rdr.endian, &data)
+	if err != nil {
+		return nil, err
 	}
 
 	return data, nil
